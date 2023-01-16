@@ -18,7 +18,7 @@ function Reportpage() {
               Report
             </button >
             </div> 
-            <Report_information></Report_information>
+         
            </div>
 
             :
