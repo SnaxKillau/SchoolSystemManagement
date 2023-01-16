@@ -26,7 +26,7 @@ function App() {
           <Route path='/SignIn' element = {<Signup></Signup>}></Route>
           <Route path='/Public' element = {<Post_Public></Post_Public>}></Route>
           <Route path='/Users' element = {<Users></Users>}></Route>
-          <Route path='/Users' element = {<Report_information></Report_information>}></Route>
+          <Route path='/Report' element = {<Report_information></Report_information>}></Route>
         </Routes>
       </Router>
    
