@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 
 export default function ContactUs(){
   const form = useRef();
+  const [report , Setreport] = useState(false)
  
 
   const sendEmail = (e) => {
@@ -15,13 +16,27 @@ export default function ContactUs(){
           console.log(error.text);
       });
   };
+  const ChangeOption = () => {
+    if(report == true){
+      Setreport(false)
+    }
+    else{
+      Setreport(true)
+    }
+    
+  }
 
 
   return (
 
    <div className='flex flex-col justify-center items-center'>
          <h1 className='flex justify-center mt-10 font-inter'>Report</h1>
+
          <form ref={form} onSubmit={sendEmail} className='bg-[#D9D9D9] drop-shadow-lg h-90 mt-2 p-10 w-3/4 sm:w-3/5'>
+        <select className='ml-4 font-semibold w-11/12' onChange={() => {ChangeOption()}}>
+            <option>Report</option>
+            <option> Ask information</option>
+        </select><br></br>
         <label className=' font-semibold ml-4'>Name</label><br></br>
         <input type="text" name="user_name" className='ml-4 mb-2 mt-2 w-11/12'/><br></br>
         <label className=' font-semibold ml-4'>Email</label><br></br>

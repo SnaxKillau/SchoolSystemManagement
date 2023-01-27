@@ -1,8 +1,11 @@
 import React from 'react'
+import Menu from './Menu'
 
 function Report_information() {
   return (
-    <div className=' h-screen mt-10 '>
+   <div>
+     <Menu></Menu>
+     <div className=' h-screen mt-10 '>
          <h1 className=' underline font-inter text-[#52586B] ml-5 sm:ml-20'>Report Detail</h1>
          <div className='flex justify-center mt-10'
          >
@@ -36,6 +39,7 @@ function Report_information() {
        
       
     </div>
+   </div>
   )
 }
 
